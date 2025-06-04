@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PORTFOLIO IZZ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="container">
+    <header class="header">
+      <h1>-PORTFOLIO IZZ-</h1>
+    </header>
+
+    <div class="profile-card scroll-reveal">
+      <div class="profile-text">
+        <h2>PROFILE</h2>
+        <p><strong>Nama:</strong> Mohammad Faiz Zuhairi</p>
+        <p><strong>Tarikh lahir:</strong> 15/3</p>
+        <p><strong>Batch:</strong> 09</p>
+        <p><strong>MBTI:</strong> INTJ - A (Dominan)</p>
+        <p><strong>Colour Flag:</strong> Obsidian / Black / Red</p>
+        <p><strong>Country:</strong> Malaysia</p>
+      </div>
+      <div class="profile-image">
+        <img src="images/izz-profile.jpg" alt="Izz Profile" />
+      </div>
+    </div>
+
+    <div class="section scroll-reveal">
+      <h2>HOBI</h2>
+      <ul class="hobbies">
+        <li>• Catur</li>
+        <li>• Bola Sepak</li>
+        <li>• Silat</li>
+        <li>• Futsal</li>
+        <li>• Gitar</li>
+        <li>• Coding</li>
+        <li>• Badminton</li>
+        <li>• Push Up</li>
+        <li>• Melihat Matahari Terbenam</li>
+        <li>• Dengar Muzik</li>
+        <li>• Melihat Bintang Bulan Di Malam Hari</li>
+        <li>• Jogging</li>
+      </ul>
+    </div>
+
+    <div class="section scroll-reveal hacker">
+      <h2>DREAM</h2>
+      <ul>
+        <li>01 Cybersecurity Expert</li>
+        <li>02 Cybersecurity Elite Attack</li>
+        <li>03 Analysis Data</li>
+        <li>04 Programmer Elite</li>
+        <li>05 Data Forensic IT</li>
+      </ul>
+      <h3>Bahasa Komputer Izz Guna:</h3>
+      <ul>
+        <li>Python</li>
+        <li>HTML</li>
+        <li>JavaScript</li>
+        <li>StyleCSS</li>
+      </ul>
+    </div>
+
+    <div class="section scroll-reveal">
+      <h2>PROJEK</h2>
+      <p>
+        Website - Explore Filem, Data Cuaca, Camera, Login Checker Password, dan lain-lain.<br/>
+        Jika anda ingin memberi idea projek boleh mesej:  
+        <a href="https://wa.me/qr/ULX426RFH6UZF1" target="_blank">WhatsApp Izz</a>
+      </p>
+    </div>
+
+    <div class="section scroll-reveal">
+      <h2>SERVIS</h2>
+      <ul>
+        <li>Create Website: RM 5 - 10</li>
+        <li>Analyst Data Team (Free Fire): RM 10 - 55</li>
+        <li>Bayaran Mingguan: RM 5 - 7 | Bulanan: RM 21 - 25</li>
+        <li>Create Logo: RM 2 - 5</li>
+        <li>Servis Mid Man: RM 9 - 15</li>
+      </ul>
+    </div>
+
+    <div class="section scroll-reveal">
+      <h2>PEMBAYARAN</h2>
+      <p>Touch N Go (TNG), Kredit - Maxis/Hotlink</p>
+      <h3>Berminat?</h3>
+      <a href="https://wa.me/qr/ULX426RFH6UZF1" target="_blank">Hubungi Sekarang!</a>
+    </div>
+  </section>
+
+  <script>
+    const emojis = ['⚽', '🏸', '♟️', '🎧', '💻', '🥋'];
+    const emojiContainer = document.getElementById('emoji-container');
+    for (let i = 0; i < 30; i++) {
+      const span = document.createElement('span');
+      span.className = 'emoji';
+      span.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      span.style.left = Math.random() * 100 + '%';
+      span.style.animationDuration = (Math.random() * 3 + 2) + 's';
+      emojiContainer.appendChild(span);
+    }
+
+    const numberDisplay = document.getElementById('numberDisplay');
+    let count = 1;
+    setInterval(() => {
+      let num = (count++ % 10).toString().padStart(2, '0');
+      if (num === '06' || num === '07' || num === '08') num = '09';
+      numberDisplay.textContent = num;
+    }, 300);
+
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+    window.addEventListener('scroll', () => {
+      const triggerBottom = window.innerHeight * 0.9;
+      revealElements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < triggerBottom) {
+          el.classList.add('visible');
+        }
+      });
+    });
+
+  <script src="script.js"></script>
+</body>
+</html>

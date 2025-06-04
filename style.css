@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #000;
+  color: white;
+}
+
+.container {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.header h1 {
+  color: red;
+  text-align: center;
+  letter-spacing: 2px;
+  border-bottom: 2px solid white;
+  padding-bottom: 10px;
+}
+
+.profile-card {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.profile-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.profile-image img {
+  width: 200px;
+  border: 3px solid red;
+  border-radius: 10px;
+}
+
+.section {
+  margin-top: 3rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.hobbies li {
+  margin: 0.3rem 0;
+  position: relative;
+  animation: drop 2s infinite ease-in-out;
+}
+
+@keyframes drop {
+  0% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(10px); opacity: 0.7; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+a {
+  color: red;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+.hacker li {
+  font-family: 'Courier New', monospace;
+  font-size: 1.2rem;
+  color: #00ff00;
+  animation: blink 0.5s step-end infinite alternate;
+}
+
+@keyframes blink {
+  from { opacity: 1; }
+  to { opacity: 0.5; }
+}
+.scroll-reveal.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
